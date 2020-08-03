@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <title>Table V03</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/perfect-scrollbar/perfect-scrollbar.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/m.css'%}">
+    <!-- <link rel="stylesheet" type="text/css" href="{%static 'css/navbar.css'%}"> -->
+<!--===============================================================================================-->
+</head>
+{% include 'alphavintage/navbar_adjusted.html'%}
+
+<body>
+    <div class="limiter">
+
+        <div class="container-table100">
+            <div class="wrap-table100">
+    <div class="table100 ver6 m-b-110">
+                    <table data-vertable="ver6">
+                        <thead>
+                            <tr class="row100 head">
+
+                                <th class="column100 column2" data-column="column2">From Currency Name</th>
+                                <th class="column100 column3" data-column="column3">To Currency Name</th>
+                                <th class="column100 column4" data-column="column4">Exchange Rate</th>
+                                <th class="column100 column5" data-column="column5">Last Refreshed</th>
+                                <th class="column100 column6" data-column="column7">Bid Price</th>
+                                <th class="column100 column7" data-column="column8">Ask Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="row100">
+
+                                <td class="column100 column2" data-column="column2">{{data1.crypto_name}}</td>
+                                <td class="column100 column3" data-column="column3">{{data1.to_currency}}</td>
+                                <td class="column100 column4" data-column="column4">{{data1.exchange_rate}}</td>
+                                <td class="column100 column5" data-column="column5">{{data1.last_refreashed}}</td>
+                                <td class="column100 column6" data-column="column6">{{data1.bid_price}}</td>
+                                <td class="column100 column7" data-column="column7">{{data1.ask_price}}</td>
+
+                            </tr>
+
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/bootstrap/js/popper.js'%}"></script>
+    <script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>

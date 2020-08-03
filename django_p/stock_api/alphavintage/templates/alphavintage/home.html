@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Full Width Pics - Start Bootstrap Template</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <!-- <link href="{%static 'css/full_pictures.css" rel="stylesheet'%}"> -->
+
+
+</head>
+
+<body>
+
+  {% include 'alphavintage/navbar.html'%}
+
+  <!-- Header - set the background image for the header in the line below -->
+  <header class="py-5 bg-image-full" style="background-image: url(static/images/cover01.jpg);">
+    <img class="img-fluid d-block mx-auto" src="static/images/logo.jpg" style="height: 200px;" alt="">
+
+  </header>
+
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <h1>About</h1>
+      <p class="lead">This web app is to provide a free info about the company current and past finansial statements based on Alpha Vintage API servises.</p>
+      <p>Backed by the prestigious Y Combinator and composed of a tight-knit community of researchers, engineers, and business professionals, Alpha Vantage Inc. has partnered with major exchanges and institutions around the world to become a leading provider of stock market APIs as well as forex (FX) and digital/crypto currency data feeds. Our success is driven by rigorous research, cutting edge technology, and a disciplined focus on democratizing access to data.</p>
+    </div>
+  </section>
+
+  <!-- Image element - set the background image for the header in the line below -->
+  <div class="py-5 bg-image-full" style="background-image: url(static/images/cover02.jpg);">
+    <!-- Put anything you want here! There is just a spacer below for demo purposes! -->
+    <div style="height: 200px;"></div>
+  </div>
+
+  <!-- Content section -->
+  <section class="py-5">
+    <div class="container">
+      <h1>Base rules of usage.</h1>
+      <p class="lead">You are able to make a 5 requests per minute.</p>
+      <p>This web app is a test nonprofit version. The financial data provided on this web app is accurate, but doesn't meant to be used in comersial and production. Consider it as a financial intertament where you can find some data about companies finansial statements.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Fin Info Web APP 2020</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="{%static 'vendor/jquery/jquery.min.js'%}"></script>
+  <script src="{%static 'vendor/bootstrap/js/bootstrap.bundle.min.js'%}"></script>
+
+</body>
+
+</html>

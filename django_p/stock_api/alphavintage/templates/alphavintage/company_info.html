@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+	<title>Table V03</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'vendor/perfect-scrollbar/perfect-scrollbar.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+	<link rel="stylesheet" type="text/css" href="{%static 'css/m.css'%}">
+	<!-- <link rel="stylesheet" type="text/css" href="{%static 'css/navbar.css'%}"> -->
+<!--===============================================================================================-->
+</head>
+{% include 'alphavintage/navbar_adjusted.html'%}
+<body>
+
+
+
+
+	<div class="limiter">
+
+	<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">{{data1.Description}}</th>
+							</tr>
+						</thead>
+					</table>
+				</div>
+
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver1 m-b-110">
+					<table data-vertable="ver1">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1"></th>
+								<th class="column100 column2" data-column="column2">Industry</th>
+								<th class="column100 column3" data-column="column3">FullTimeEmployees</th>
+								<th class="column100 column4" data-column="column4">MarketCapitalization</th>
+								<th class="column100 column5" data-column="column5">DividendPerShare</th>
+								<th class="column100 column6" data-column="column6">DividendYield</th>
+								<th class="column100 column7" data-column="column7">EPS</th>
+								<th class="column100 column8" data-column="column8">RevenuePerShareTTM</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{data1.Name}}</td>
+								<td class="column100 column2" data-column="column2">{{data1.Industry}}</td>
+								<td class="column100 column3" data-column="column3">{{data1.FullTimeEmployees}}</td>
+								<td class="column100 column4" data-column="column4">{{data1.MarketCapitalization}}</td>
+								<td class="column100 column5" data-column="column5">{{data1.DividendPerShare}}</td>
+								<td class="column100 column6" data-column="column6">{{data1.DividendYield}}</td>
+								<td class="column100 column7" data-column="column7">{{data1.EPS}}</td>
+								<td class="column100 column7" data-column="column8">{{data1.RevenuePerShareTTM}}</td>
+
+							</tr>
+
+						</tbody>
+					</table>
+				</div>
+
+				<div class="table100 ver2 m-b-110">
+					<table data-vertable="ver2">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">Fiscal Date Ending</th>
+								<th class="column100 column2" data-column="column2">Total Revenue</th>
+								<th class="column100 column3" data-column="column3">Total Operating Expense</th>
+								<th class="column100 column4" data-column="column4">Gross Profit</th>
+								<th class="column100 column5" data-column="column5">Income Before Tax</th>
+								<th class="column100 column6" data-column="column6">Net Income</th>
+								<th class="column100 column7" data-column="column7">Interest Income</th>
+								<th class="column100 column8" data-column="column8">Interest Expense</th>
+							</tr>
+						</thead>
+						<tbody>
+							{%for i in data2.annualReports%}
+							<tr class="row100">
+
+
+									<td class="column100 column1">{{i.fiscalDateEnding}}</td>
+
+									<td class="column100 column2" >{{i.totalRevenue}}</td>
+
+									<td class="column100 column3" data-column="column3">
+									{{i.totalOperatingExpense}}</td>
+
+									<td class="column100 column4" data-column="column4">{{i.grossProfit}}</td>
+
+									<td class="column100 column5" data-column="column5">{{i.incomeBeforeTax}}</td>
+
+									<td class="column100 column6" data-column="column6">{{i.netIncome}}</td>
+
+									<td class="column100 column7" data-column="column7">{{i.interestIncome}}</td>
+
+									<td class="column100 column8" data-column="column8">{{i.interestExpense}}</td>
+
+
+
+
+							</tr>
+							{%endfor%}
+
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table100 ver3 m-b-110">
+						<table data-vertable="ver3">
+							<thead>
+								<tr class="row100 head">
+									<th class="column100 column1" data-column="column1">Fiscal Date Ending</th>
+									<th class="column100 column2" data-column="column2">Total Assets</th>
+									<th class="column100 column3" data-column="column3">Total Liabilities</th>
+									<th class="column100 column4" data-column="column4">Total Shareholder Equity</th>
+									<th class="column100 column5" data-column="column5">Cash</th>
+									<th class="column100 column6" data-column="column6">Common Stock Equity</th>
+									<th class="column100 column7" data-column="column7">Capital Surplas</th>
+									<th class="column100 column8" data-column="column8">Long Term Debt</th>
+								</tr>
+							</thead>
+							<tbody>
+								{%for i in data3.annualReports%}
+								<tr class="row100">
+									<td class="column100 column1" data-column="column1">{{i.fiscalDateEnding}}</td>
+									<td class="column100 column2" data-column="column2">{{i.totalAssets}}</td>
+									<td class="column100 column3" data-column="column3">{{i.totalLiabilities}}</td>
+									<td class="column100 column4" data-column="column4">{{i.totalShareholderEquity}}</td>
+									<td class="column100 column5" data-column="column5">{{i.cash}}</td>
+									<td class="column100 column6" data-column="column6">{{i.commonStockTotalEquity}}</td>
+									<td class="column100 column7" data-column="column7">{{i.capitalSurplus}}</td>
+									<td class="column100 column8" data-column="column8">{{i.longTermDebt}}</td>
+								</tr>
+								{%endfor%}
+
+
+							</tbody>
+						</table>
+					</div>
+
+					<div class="table100 ver4 m-b-110">
+					<table data-vertable="ver4">
+						<thead>
+
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">Fiscal Date Ending</th>
+								<th class="column100 column2" data-column="column2">Investments</th>
+								<th class="column100 column3" data-column="column3">Cash Flow From Investment</th>
+								<th class="column100 column4" data-column="column4">Operating Cash Flow</th>
+								<th class="column100 column5" data-column="column5">Net Income</th>
+								<th class="column100 column6" data-column="column6">Depresiation</th>
+								<th class="column100 column7" data-column="column7">Divident Payout</th>
+								<th class="column100 column8" data-column="column8">Net Borrowings</th>
+							</tr>
+						</thead>
+						<tbody>
+							{%for i in data4.annualReports%}
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">{{i.fiscalDateEnding}}</td>
+								<td class="column100 column2" data-column="column2">{{i.investments}}</td>
+								<td class="column100 column3" data-column="column3">{{i.cashflowFromInvestment}}</td>
+								<td class="column100 column4" data-column="column4">{{i.operatingCashflow}}</td>
+								<td class="column100 column5" data-column="column5">{{i.netIncome}}</td>
+								<td class="column100 column6" data-column="column6">{{i.depreciation}}</td>
+								<td class="column100 column7" data-column="column7">{{i.dividendPayout}}</td>
+								<td class="column100 column8" data-column="column8">{{i.netBorrowings}}</td>
+
+							</tr>
+							{%endfor%}
+						</tbody>
+					</table>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+	</div>
+
+
+
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/bootstrap/js/popper.js'%}"></script>
+	<script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>

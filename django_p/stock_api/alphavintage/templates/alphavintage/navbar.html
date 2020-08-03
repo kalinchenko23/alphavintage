@@ -1,0 +1,64 @@
+<!-- Navigation -->
+{%load static%}
+<link rel="stylesheet" type="text/css" href="{%static 'css/navbar.css'%}">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container" style="display: block">
+      <a class="navbar-brand" href="https://www.iban.com/currency-codes">Get Currency Code</a>
+      <a class="navbar-brand" href="https://stocks.tradingcharts.com/stocks/symbols/s">Get Company Symbol</a>
+    </div>
+    <form  method="post">
+        {% csrf_token %}
+         {{ form.as_table}}
+        {%block content%}
+
+        {%endblock%}
+    </form>
+
+
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/ ">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="/sector">Sector Performance</a>
+          </li>
+
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/exchange" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Currency Ex rate
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/cryptocurrency">Cryptocurrency</a>
+                <a class="dropdown-item" href="/exchange">Forex</a>
+              <div class="dropdown-divider"></div>
+
+              </div>
+          </li>
+
+           <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="/stock_info" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Stocks
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/stock_history">Stocks History</a>
+                <a class="dropdown-item" href="/stock_info">Stocks(Last 30 days).</a>
+              <div class="dropdown-divider"></div>
+
+              </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/company_info">company info</a>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+  </nav>

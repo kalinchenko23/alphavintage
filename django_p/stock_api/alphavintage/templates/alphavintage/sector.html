@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{%load static%}
+<head>
+    <title>Table V03</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+    <link rel="icon" type="image/png" href="{%static 'images/icons/favicon.ico'%}"/>
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'vendor/perfect-scrollbar/perfect-scrollbar.css'%}">
+<!--===============================================================================================-->
+    <link rel="stylesheet" type="text/css" href="{%static 'css/util.css'%}">
+    <link rel="stylesheet" type="text/css" href="{%static 'css/m.css'%}">
+    <!-- <link rel="stylesheet" type="text/css" href="{%static 'css/navbar.css'%}"> -->
+<!--===============================================================================================-->
+</head>
+{% include 'alphavintage/navbar.html'%}
+
+<body>
+
+
+    <div class="limiter">
+
+
+        <div class="container-table100">
+            <div class="wrap-table100">
+                <div class="table100 ver1 m-b-110">
+                    <table data-vertable="ver1">
+                        <thead>
+                            <tr class="row100 head">
+                                <th class="column100 column1" data-column="column1">Time Period</th>
+                                <th class="column100 column2" data-column="column2">Information Technology</th>
+                                <th class="column100 column3" data-column="column3">Consumer Discretionary</th>
+                                <th class="column100 column4" data-column="column4">Communication Services</th>
+                                <th class="column100 column5" data-column="column5">Utilities</th>
+                                <th class="column100 column6" data-column="column6">Materials</th>
+                                <th class="column100 column7" data-column="column7">Financials</th>
+                                <th class="column100 column8" data-column="column8">Consumer Staples</th>
+                                <th class="column100 column9" data-column="column9">Real Estate</th>
+                                <th class="column100 column10" data-column="column10">Industrials</th>
+                                <th class="column100 column11" data-column="column11">Health Care</th>
+                                <th class="column100 column12" data-column="column12">Energy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for key,value in data.items %}
+                            <tr class="row100">
+                                <td class="column100 column1" data-column="column1">{{key}}}</td>
+                                <td class="column100 column1" data-column="column1">{{value.information_tech}}</td>
+                                <td class="column100 column2" data-column="column2">{{value.consumer}}</td>
+                                <td class="column100 column3" data-column="column3">{{value.comm_serv}}</td>
+                                <td class="column100 column4" data-column="column4">{{value.Utilities}}</td>
+                                <td class="column100 column5" data-column="column5">{{value.Materials}}</td>
+                                <td class="column100 column6" data-column="column6">{{value.Financials}}</td>
+                                <td class="column100 column7" data-column="column7">{{value.Consumer_Staples}}</td>
+                                <td class="column100 column8" data-column="column8">{{value.Real_Estate}}</td>
+                                <td class="column100 column9" data-column="column9">{{value.Industrials}}</td>
+                                <td class="column100 column10" data-column="column10">{{value.Health_Care}}</td>
+                                <td class="column100 column11" data-column="column11">{{value.Energy}}</td>
+
+
+                            </tr>
+                            {%endfor%}
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/bootstrap/js/popper.js'%}"></script>
+    <script src="{%static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+    <script src="{%static 'js/main.js'%}"></script>
+
+</body>
+</html>
