@@ -1,36 +1,38 @@
 import requests
 import json
+import os
 
-api_key1="TK2DZ6MXHZUSE21M"
-api_key2="9CBKXAM66H40DP5E"
 
+
+api_key=os.getenv('API_KEY')
 class InfoGatheringCompany():
-    api_key1="TK2DZ6MXHZUSE21M"
+
+
 
 
     def company_overview(self,company_name):
-        url=f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={company_name}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=OVERVIEW&symbol={company_name}&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
         return result
 
     def income_statement(self,company_name):
-        url=f"https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={company_name}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=INCOME_STATEMENT&symbol={company_name}&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
         return result
 
     def balanse_sheet(self,company_name):
-        url=f"https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol={company_name}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=BALANCE_SHEET&symbol={company_name}&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
         return result
 
     def cash_flow(self,company_name):
-        url=f"https://www.alphavantage.co/query?function=CASH_FLOW&symbol={company_name}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=CASH_FLOW&symbol={company_name}&apikey={api_key}"
         try:
             r=requests.get(url)
             result=r.json()
@@ -40,7 +42,7 @@ class InfoGatheringCompany():
         return result
 
     def get_currency_exchange_rate(self,from_currency,to_currency):
-        url=f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={from_currency}&to_currency={to_currency}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={from_currency}&to_currency={to_currency}&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
@@ -62,7 +64,7 @@ class InfoGatheringCompany():
 
 
     def get_cryptocurrency_rate(self,currency):
-        url=f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={currency}&to_currency=USD&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency={currency}&to_currency=USD&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
@@ -82,7 +84,7 @@ class InfoGatheringCompany():
         return d
 
     def get_daily_adjusted_stock(self,stock):
-        url=f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={stock}&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={stock}&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
@@ -106,7 +108,7 @@ class InfoGatheringCompany():
 
 
     def get_daily_adjusted_stock_history(self,stock,date):
-        url=f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={stock}&outputsize=full&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY_ADJUSTED&symbol={stock}&outputsize=full&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         result_modified=json.dumps(result,indent=2)
@@ -130,7 +132,7 @@ class InfoGatheringCompany():
         return daily_adjused
 
     def us_sector_performance(self):
-        url=f"https://www.alphavantage.co/query?function=SECTOR&apikey={api_key1}"
+        url=f"https://www.alphavantage.co/query?function=SECTOR&apikey={api_key}"
         r=requests.get(url)
         result=r.json()
         d={}
@@ -154,15 +156,11 @@ class InfoGatheringCompany():
                     }
                 except KeyError:
                     continue
+                except TypeError:
+                    continue
 
 
         return d
-
-
-# x=InfoGatheringCompany()
-# print(x.get_currency_exchange_rate("EUR"))
-
-
 
 
 
