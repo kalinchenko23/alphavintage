@@ -1,0 +1,19 @@
+.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top a:hover {
+  color: #7B68EE;
+}
+
+form{
+    margin-top: 20px;
+    width: 20%;
+}
+
+.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top{
+    padding-top: 40px;
+    padding-bottom: 40px;
+    position: relative;
+}
+
+section{
+    background-color: #C0C0C0;
+}
+
