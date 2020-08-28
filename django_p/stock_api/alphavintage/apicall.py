@@ -1,18 +1,12 @@
 import requests
 import json
 import os
-<<<<<<< HEAD
 with open("/etc/config.json") as config_file:
     config=json.load(config_file)
 
 
-api_key=config['API_KEY']
-=======
+api_key=config.get["API_KEY"]
 
-
-
-api_key=os.getenv('API_KEY')
->>>>>>> e1f03f9add26a731e6e8a102d6e916e3d9614fbb
 class InfoGatheringCompany():
 
 
@@ -166,17 +160,4 @@ class InfoGatheringCompany():
                     continue
                 except TypeError:
                     continue
-<<<<<<< HEAD
-=======
-
->>>>>>> e1f03f9add26a731e6e8a102d6e916e3d9614fbb
-
         return d
-
-
-<<<<<<< HEAD
-
-
-=======
->>>>>>> e1f03f9add26a731e6e8a102d6e916e3d9614fbb
-
