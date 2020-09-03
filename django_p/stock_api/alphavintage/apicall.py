@@ -5,7 +5,8 @@ with open("/etc/config.json") as config_file:
     config=json.load(config_file)
 
 
-api_key=config.get["API_KEY"]
+api_key=config["API_KEY"]
+
 
 class InfoGatheringCompany():
 
